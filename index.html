@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="onInit()">
     <center>
         <h1>
-            Date Converter
+            המרת תאריכים
         </h1>
 
         <main>
             <form onsubmit="onConvertDate(event)">
-                <label>Start Date
-                    <input type="date" class="start-date" name="" id="">
+                <label>תאריך התחלה
+                    <input type="date" class="start-date">
                 </label>
-                <label>End Date
-                    <input type="date" class="end-date" name="" id="">
+                <label>תאריך סיום
+                    <input type="date" class="end-date">
                 </label>
-                <button>Convert</button>
+                <button>המרה</button>
             </form>
 
             <section class="result">

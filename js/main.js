@@ -7,9 +7,11 @@ function onInit() {
     const formattedDate = getFormattedDate(date)
     document.querySelector('.start-date').value = formattedDate
 }
+
 async function onConvertDate(ev) {
     ev.preventDefault()
-    // get the date values from the form inputs
+    const btn = document.querySelector('button')
+    btn.style.backgroundColor = 'yellow'
     const startDate = document.querySelector('.start-date').value
     const endDate = document.querySelector('.end-date').value
 
@@ -21,7 +23,7 @@ async function onConvertDate(ev) {
         const res = await getSingleDate(`${URL}&date=${startDate}`)
         text = `התאריך שבחרת הוא -${res}`
     }
-    console.log('text:', text)
 
     document.querySelector('.result').innerText = text
+    btn.style.backgroundColor = 'white'
 }
