@@ -1,1 +1,16 @@
-const URL = 'https://www.hebcal.com/converter?cfg=json&date=2011-06-02&g2h=1&strict=1'
+'use strict'
+
+function getAns(onSuccess,url) {
+    const xhr = new XMLHttpRequest()
+    console.log(xhr)
+
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            const res = JSON.parse(xhr.responseText)
+            onSuccess(res)
+        }
+    }
+
+    xhr.open('GET', url)
+    xhr.send()
+}
