@@ -1,0 +1,1 @@
+const URL = 'https://www.hebcal.com/converter?cfg=json&date=2011-06-02&g2h=1&strict=1'
