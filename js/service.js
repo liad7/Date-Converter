@@ -1,6 +1,6 @@
 'use strict'
 
-function getAns(onSuccess,url) {
+function getAns(onSuccess, url) {
     const xhr = new XMLHttpRequest()
     console.log(xhr)
 
@@ -13,4 +13,8 @@ function getAns(onSuccess,url) {
 
     xhr.open('GET', url)
     xhr.send()
+}
+
+function getFormattedDate(date) {
+    return date.getFullYear() + '-' + ("0" + (date.getMonth() + 1)).slice(-2) + '-' + ("0" + date.getDate()).slice(-2)
 }
