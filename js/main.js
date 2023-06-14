@@ -9,12 +9,10 @@ function onInit() {
 }
 function onConvertDate(ev) {
     ev.preventDefault()
-    console.log('click')
     // get the date values from the form inputs
     const startDate = document.querySelector('.start-date').value
-    console.log('startDate:', startDate)
     const endDate = document.querySelector('.end-date').value
-    console.log('endDate:', endDate)
 
+    
 
 }
