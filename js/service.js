@@ -15,12 +15,14 @@ async function getSingleDate(url) {
 }
 
 async function getDateRange(url) {
+    console.log('url:', url);
     try {
         const res = await getAnswer(url)
+        console.log('res:', res);
         const { start, end, hdates: dates } = res
         return {
-            start: dates[start],
-            end: dates[end]
+            start: dates[start].hebrew,
+            end: dates[end].hebrew
         }
     } catch (err) {
         console.log('Can\'t get this date range:', err)
