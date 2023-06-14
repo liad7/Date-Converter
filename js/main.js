@@ -13,13 +13,15 @@ async function onConvertDate(ev) {
     const startDate = document.querySelector('.start-date').value
     const endDate = document.querySelector('.end-date').value
 
+    let text = ''
     if (endDate) {
         const res = await getDateRange(`${URL}&start=${startDate}&end=${endDate}`)
-        console.log('res:', res);
+        text = `טווח התאריכים הנבחר הוא: ${res.start} - ${res.end}`
     } else {
         const res = await getSingleDate(`${URL}&date=${startDate}`)
-        console.log('res:', res);
+        text = `התאריך שבחרת הוא -${res}`
     }
+    console.log('text:', text)
 
-
+    document.querySelector('.result').innerText = text
 }
